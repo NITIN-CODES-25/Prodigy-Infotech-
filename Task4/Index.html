@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogesh Singh - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Yogesh Singh</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-indigo-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="hover:text-indigo-400 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="hover:text-indigo-400 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-6 text-sm hover:bg-gray-800">About</a>
+            <a href="#skills" class="block py-2 px-6 text-sm hover:bg-gray-800">Skills</a>
+            <a href="#projects" class="block py-2 px-6 text-sm hover:bg-gray-800">Projects</a>
+            <a href="#contact" class="block py-2 px-6 text-sm hover:bg-gray-800">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section id="home" class="text-center py-20 section-fade-in">
+            <!-- I have updated the image size and source with the file you provided. -->
+            <img src="profile.jpg" alt="Yogesh Singh" class="w-40 h-40 object-cover mx-auto rounded-full mb-6 border-4 border-indigo-500 shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/160x160/1a202c/7f9cf5?text=YS';">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-3">Yogesh Singh</h1>
+            <p class="text-lg md:text-xl text-indigo-300">Full-Stack Developer | Python | Java | React | AWS | GitHub</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 section-fade-in">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">About Me</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 rounded-lg p-8 shadow-2xl">
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    I’m a passionate and driven B.Tech Computer Science student with hands-on experience in software development and a strong foundation in both front-end and back-end technologies. I enjoy building efficient, scalable applications and constantly seek opportunities to expand my knowledge and apply it in real-world projects.
+                </p>
+                <p class="text-gray-300 leading-relaxed mb-6">
+                    Beyond coding, I bring a strong set of soft skills that help me stand out: problem solving, quick learning ability, effective communication, leadership & teamwork, and time management. I’m currently looking for opportunities where I can grow as a Software Developer, contribute to impactful projects, and work with a team that values continuous learning and innovation. Whether it’s backend logic, front-end interactivity, or cloud deployment—I’m excited to solve problems and build meaningful solutions.
+                </p>
+                 <div class="border-t border-gray-700 pt-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Core Strengths</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
+                        <div class="flex items-start"><i class="fas fa-lightbulb text-indigo-400 mt-1 mr-3"></i><span><strong>Problem Solving:</strong> Breaking down complex problems into logical, implementable steps.</span></div>
+                        <div class="flex items-start"><i class="fas fa-rocket text-indigo-400 mt-1 mr-3"></i><span><strong>Quick Learning Ability:</strong> Grasping new technologies and frameworks quickly.</span></div>
+                        <div class="flex items-start"><i class="fas fa-comments text-indigo-400 mt-1 mr-3"></i><span><strong>Effective Communication:</strong> Articulating ideas clearly and thriving in collaborative environments.</span></div>
+                        <div class="flex items-start"><i class="fas fa-users text-indigo-400 mt-1 mr-3"></i><span><strong>Leadership & Teamwork:</strong> Experience leading small teams and working effectively in group projects.</span></div>
+                        <div class="flex items-start"><i class="fas fa-clock text-indigo-400 mt-1 mr-3"></i><span><strong>Time Management:</strong> Highly organized and efficient with project deadlines and task planning.</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 section-fade-in">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Technical Skills</h2>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-4">Programming Languages</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fab fa-python text-indigo-400 mr-2"></i>Python</li>
+                        <li><i class="fab fa-java text-indigo-400 mr-2"></i>Java</li>
+                        <li><i class="fas fa-code text-indigo-400 mr-2"></i>C</li>
+                    </ul>
+                </div>
+                <!-- Web Development -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-4">Web Development</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fab fa-html5 text-indigo-400 mr-2"></i>HTML & CSS</li>
+                        <li><i class="fab fa-js text-indigo-400 mr-2"></i>JavaScript</li>
+                        <li><i class="fab fa-react text-indigo-400 mr-2"></i>React.js</li>
+                    </ul>
+                </div>
+                <!-- Databases -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-4">Databases</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fas fa-database text-indigo-400 mr-2"></i>MySQL</li>
+                        <li><i class="fas fa-leaf text-indigo-400 mr-2"></i>MongoDB</li>
+                    </ul>
+                </div>
+                <!-- Cloud & Tools -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-4">Cloud & Tools</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fab fa-aws text-indigo-400 mr-2"></i>AWS</li>
+                        <li><i class="fab fa-git-alt text-indigo-400 mr-2"></i>Git & GitHub</li>
+                    </ul>
+                </div>
+                <!-- Other Interests -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-4">Other Interests</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fas fa-robot text-indigo-400 mr-2"></i>Generative AI</li>
+                        <li><i class="fab fa-osi text-indigo-400 mr-2"></i>Open Source</li>
+                        <li><i class="fas fa-file-code text-indigo-400 mr-2"></i>Clean Code Practices</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 section-fade-in">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://placehold.co/600x400/1f2937/a78bfa?text=E-commerce+Platform" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-400 mb-4">A full-featured e-commerce website built with the MERN stack (MongoDB, Express, React, Node.js). Includes product catalog, user authentication, and a shopping cart.</p>
+                        <a href="#" class="text-indigo-400 hover:text-indigo-300 font-semibold">View Code <i class="fab fa-github ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://placehold.co/600x400/1f2937/a78bfa?text=Cloud+Storage+App" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Cloud Storage App</h3>
+                        <p class="text-gray-400 mb-4">A web application using Python (Flask/Django) and AWS S3 for secure file uploads, storage, and management. Features user accounts and access controls.</p>
+                        <a href="#" class="text-indigo-400 hover:text-indigo-300 font-semibold">View Code <i class="fab fa-github ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://placehold.co/600x400/1f2937/a78bfa?text=AI+Chatbot" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">AI Chatbot</h3>
+                        <p class="text-gray-400 mb-4">An intelligent chatbot using Python and NLP libraries to understand and respond to user queries. Integrated into a simple web interface with React.</p>
+                        <a href="#" class="text-indigo-400 hover:text-indigo-300 font-semibold">View Code <i class="fab fa-github ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center section-fade-in">
+            <h2 class="text-3xl font-bold text-white mb-4">Get In Touch</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">I'm actively looking for new opportunities. If you have a project in mind or just want to connect, feel free to reach out!</p>
+            <a href="mailto:yogesh.singh@example.com" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition-colors duration-300 text-lg">
+                Say Hello
+            </a>
+            <div class="flex justify-center space-x-6 mt-12">
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-github text-3xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-linkedin text-3xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-twitter text-3xl"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800/50">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
+            <p>&copy; 2024 Yogesh Singh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const sections = document.querySelectorAll('.section-fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
