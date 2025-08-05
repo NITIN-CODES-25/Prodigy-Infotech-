@@ -1,0 +1,130 @@
+body {
+    background: #1976d2; /* solid blue background */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 32px 40px;
+    text-align: center;
+}
+
+h1 {
+    color: #222;
+    margin-bottom: 24px;
+}
+
+#mode-selection {
+    margin-bottom: 24px;
+}
+
+#mode-selection button {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    margin: 0 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#mode-selection button:hover {
+    background: #1565c0;
+}
+
+#game {
+    margin-top: 16px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.cell {
+    background: #e3eafc;
+    border: 2px solid #1976d2;
+    border-radius: 8px;
+    font-size: 2.5rem;
+    color: #1976d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    height: 80px;
+    width: 80px;
+}
+
+.cell:hover {
+    background: #bbdefb;
+}
+
+.cell.win {
+    background: #43a047 !important;
+    color: #fff !important;
+    animation: win-flash 0.7s ease-in-out 2;
+}
+
+@keyframes win-flash {
+    0% { transform: scale(1); background: #43a047; }
+    50% { transform: scale(1.15); background: #66bb6a; }
+    100% { transform: scale(1); background: #43a047; }
+}
+
+#message {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 12px;
+    min-height: 24px;
+}
+
+#restart-btn {
+    background: #43a047;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#restart-btn:hover {
+    background: #388e3c;
+}
+
+#back-btn {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    transition: background 0.2s;
+}
+
+#back-btn:hover {
+    background: #c62828;
+}
+
+.hidden {
+    display: none;
+} 
